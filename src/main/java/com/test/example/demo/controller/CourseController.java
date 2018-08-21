@@ -34,7 +34,7 @@ public class CourseController {
 		return new ResponseEntity<Object>(response,HttpStatus.OK);
 	}
 	
-	@RequestMapping(value= "{/id}",method=RequestMethod.GET)
+	@RequestMapping(value= "/{id}",method=RequestMethod.GET)
 	public ResponseEntity<Object> getCourseById(@PathVariable Long id){
 		CourseResponse response =courseService.getCourse(id);
 		return new ResponseEntity<Object>(response,HttpStatus.OK);
